@@ -41,7 +41,7 @@ local config = {
 	debug_key_events = true,
 }
 
-config.font_size = 15
+config.font_size = 20
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = false
 config.tab_bar_at_bottom = true

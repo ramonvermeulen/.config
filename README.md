@@ -6,5 +6,5 @@ e.g. using `$HOME/.config` to store configuration files for different applicatio
 ## installation
 Clone the repository into your `$HOME` directory:
 ```bash
-git clone https://github.com/ramonvermeulen/.config.git $HOME
+git clone git@github.com:ramonvermeulen/.config.git $HOME/.config && mv $HOME/.config/.zshrc $HOME/.zshrc
 ```

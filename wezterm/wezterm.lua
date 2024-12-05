@@ -49,7 +49,7 @@ config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 
 -- tmux
-config.leader = { key = "Control", mods = "NONE", timeout_milliseconds = 2000 }
+config.leader = { key = ".", mods = "ALT", timeout_milliseconds = 2000 }
 config.keys = {
 	{
 		mods = "LEADER",
@@ -58,7 +58,7 @@ config.keys = {
 	},
 	{
 		mods = "LEADER",
-		key = "x",
+		key = "w",
 		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
 	{

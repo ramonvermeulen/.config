@@ -163,3 +163,24 @@ down = 'volume down'
 up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
+# move applications to correct workspace on start-up
+[[on-window-detected]]
+if.app-id = "com.github.wez.wezterm"
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = "com.google.Chrome"
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = "com.apple.mail"
+run = ['move-node-to-workspace 7']
+
+[[on-window-detected]]
+if.app-id = "com.spotify.client"
+run = ['move-node-to-workspace 8']
+
+[[on-window-detected]]
+if.app-id = "com.tinyspeck.slackmacgap"
+run = ['move-node-to-workspace 9']
+

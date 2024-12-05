@@ -17,14 +17,12 @@ alias vi=load_node_before_nvim
 alias vim=load_node_before_nvim
 alias nvim=load_node_before_nvim
 
-# lazygit
-alias g=lazygit
-
 # os
 alias up="sudo apt-get update && sudo apt-get upgrade"
 
-# git
+# lazygit
+alias g=lazygit
+alias cat=bat
 alias greset="git reset --soft HEAD^"
-
-# replace grep with rg (ripgrep)
 alias grep=rg
+

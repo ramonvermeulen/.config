@@ -47,6 +47,8 @@ config.hide_tab_bar_if_only_one_tab = false
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
+config.window_background_opacity = 0.7
+config.macos_window_background_blur = 20
 
 -- tmux
 config.leader = { key = ".", mods = "ALT", timeout_milliseconds = 2000 }

@@ -124,6 +124,9 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 
+# toggle full screen focus window
+alt-f = 'fullscreen'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -171,6 +174,10 @@ run = ['move-node-to-workspace 1']
 [[on-window-detected]]
 if.app-id = "com.google.Chrome"
 run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = "com.apple.iCal"
+run = ['move-node-to-workspace 6']
 
 [[on-window-detected]]
 if.app-id = "com.apple.mail"

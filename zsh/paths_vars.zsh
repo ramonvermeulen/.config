@@ -2,8 +2,9 @@
 
 addToPath $HOME/.local/bin # pip user level installs
 addToPath $HOME/.dotfiles/bin
-addToPath /usr/local/go/bin
 addToPath $HOME/.cargo/bin
+addToPath $HOME/go/bin
+addToPath /usr/local/go/bin
 addToPath /opt/nvim-linux64/bin
 addToPath /opt/homebrew/bin
 addToPath /opt/homebrew/sbin

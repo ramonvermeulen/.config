@@ -7,6 +7,7 @@ addToPath $HOME/go/bin
 addToPath /usr/local/go/bin
 addToPath /opt/nvim-linux64/bin
 addToPath /opt/homebrew/bin
+addToPath $HOME/.nvm/versions/node/v23.3.0/bin
 addToPath /opt/homebrew/sbin
 addToPath $PYENV_ROOT/bin
 addToPath /Applications/WezTerm.app/Contents/MacOS

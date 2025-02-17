@@ -8,7 +8,7 @@ set wrapscan                      " searches wrap around the end of the file
 
 set gdefault                      " substitute all occurrences in line per default
 set history=10000                 " keep x lines of command line history
-set scrolloff=5 sidescrolloff=10  " keep some lines before and after the cursor visible
+set scrolloff=10 sidescrolloff=10  " keep some lines before and after the cursor visible
 set clipboard=unnamedplus,unnamed,ideaput " integrate with system clipboard
 
 
@@ -18,7 +18,6 @@ set commentary
 set surround                      " emulate vim-surround plugin
 set ideajoin
 set ideastatusicon=disabled
-
 
 " set <leader> to <space>
 let mapleader = " "
@@ -69,3 +68,9 @@ map <Leader>ff <action>(com.mituuz.fuzzier.FuzzierVCS)
 
 nnoremap <Esc> :noh<CR>
 nnoremap <leader>r cgn
+
+" requires the quickscope Jetbrains plugin
+set quickscope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_secondary_color = '#ff00ff'
+let g:qs_primary_color = '#ff0000'

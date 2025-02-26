@@ -1,0 +1,7 @@
+[include]
+  path = .gitconfig_personal
+
+# example, can have a whole list, change me and move to ~
+[includeIf "gitdir:~/projects/work/<company>/"]
+  path = .gitconfig_<company>
+

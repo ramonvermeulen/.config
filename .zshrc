@@ -1,14 +1,5 @@
-export ZSH="$HOME/.oh-my-zsh"
 export PYENV_ROOT="$HOME/.pyenv"
 export EDITOR="nvim"
-
-ZSH_THEME="agnoster"
-
-zstyle ':omz:plugins:nvm' lazy yes
-
-plugins=(git nvm)
-
-source $ZSH/oh-my-zsh.sh
 
 for file in $HOME/.config/zsh/*.zsh; do
   source "$file"
@@ -26,3 +17,12 @@ eval "$(fzf --zsh)"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(direnv hook zsh)"
+eval "$(starship init zsh)"
+
+bindkey -v
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi

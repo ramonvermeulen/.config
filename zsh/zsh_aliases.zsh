@@ -19,4 +19,12 @@ alias g=lazygit
 alias cat=bat
 alias greset="git reset --soft HEAD^"
 alias grep=rg
+alias gact="gcloud config configurations activate"
 
+eval "$(pyenv init -)"
+
+act() {
+    [ -f "bin/activate" ] && source bin/activate
+    [ -f ".venv/bin/activate" ] && source .venv/bin/activate
+    [ -f "venv/bin/activate" ] && source .venv/bin/activate
+}

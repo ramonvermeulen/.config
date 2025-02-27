@@ -4,6 +4,7 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 format = """
+(git user: $custom\n)\
 $directory\
 $direnv\
 $git_branch\
@@ -20,17 +21,15 @@ $cmd_duration\
 $line_break\
 $character
 """
-#   ($custom.git_email)\
 
-
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
-vimcmd_symbol = "[❮](bold green)"
+[character]
+success_symbol = "[➜](bold green)"
+vimcmd_symbol = "[❮](bold green)"  # vi-mode symbol
 
 [directory]
 truncate_to_repo = false
 truncation_symbol = ".../"
+truncation_length = 6
 style = "bold blue"
 
 [direnv]
@@ -63,5 +62,5 @@ format = '[$symbol$active(\($region\))]($style) '
 [custom.git_email]
 command = "git config user.email"
 when = "git rev-parse --git-dir 2> /dev/null"
-format = " [$output]($style) "
-style = "bright-yellow bold"
+format = "[$output]($style)"
+style = "green bold"

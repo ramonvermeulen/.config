@@ -5,6 +5,7 @@
 add_newline = true
 format = """
 $directory\
+$direnv\
 $git_branch\
 $git_status\
 $fill\
@@ -28,9 +29,23 @@ vimcmd_symbol = "[❮](bold green)"
 
 [directory]
 truncate_to_repo = false
+truncation_symbol = ".../"
+style = "bold blue"
+
+[direnv]
+disabled = false
+format = "[.envrc $loaded/$allowed]($style) "
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+style = "bold yellow"
 
 [fill]
 symbol = " "
+
+[python]
+symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [gcloud]
 symbol = "󱇶 "

@@ -1,23 +1,44 @@
-# Get editor completions based on the config schema
+
 "$schema" = 'https://starship.rs/config-schema.json'
 
 # Inserts a blank line between shell prompts
 add_newline = true
+format = """
+$directory\
+$git_branch\
+$git_status\
+$fill\
+$lua\
+$python\
+$nodejs\
+$gcloud\
+$docker_context\
+$jobs\
+$cmd_duration\
+$line_break\
+$character
+"""
+#   ($custom.git_email)\
+
 
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
 vimcmd_symbol = "[❮](bold green)"
 
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
+[directory]
+truncate_to_repo = false
 
-format = "$all${custom.git_email}"
+[fill]
+symbol = " "
+
+[gcloud]
+symbol = "󱇶 "
+format = '[$symbol$active(\($region\))]($style) '
 
 ### Custom comands
 [custom.git_email]
 command = "git config user.email"
 when = "git rev-parse --git-dir 2> /dev/null"
-format = "by [$output]($style) "
+format = " [$output]($style) "
 style = "bright-yellow bold"

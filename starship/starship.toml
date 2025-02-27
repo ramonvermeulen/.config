@@ -11,6 +11,7 @@ $git_status\
 $fill\
 $lua\
 $python\
+$golang\
 $nodejs\
 $gcloud\
 $docker_context\
@@ -46,6 +47,13 @@ symbol = " "
 [python]
 symbol = " "
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[golang]
+symbol = " "
+format = '[$symbol($version )]($style)'
+
+[nodejs]
+format = '[$symbol($version )]($style)'
 
 [gcloud]
 symbol = "󱇶 "

@@ -65,12 +65,9 @@ nmap <leader>f  :action ReformatCode<CR>
 map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
 map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
 map <Leader>ff <action>(com.mituuz.fuzzier.FuzzierVCS)
+" requires the flash Jetbrains plugin
+map s (flash.search)
 
 nnoremap <Esc> :noh<CR>
 nnoremap <leader>r cgn
 
-" requires the quickscope Jetbrains plugin
-set quickscope
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-let g:qs_secondary_color = '#ff00ff'
-let g:qs_primary_color = '#ff0000'

@@ -51,7 +51,7 @@ config.window_background_opacity = 0.9
 config.macos_window_background_blur = 20
 
 -- tmux
-config.leader = { key = ".", mods = "ALT", timeout_milliseconds = 2000 }
+config.leader = { key = "`", mods = "OPT", timeout_milliseconds = 2000 }
 config.keys = {
 	{
 		mods = "LEADER",
@@ -77,6 +77,11 @@ config.keys = {
 		mods = "LEADER",
 		key = "\\",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		mods = "LEADER",
+		key = "z",
+		action = wezterm.action.TogglePaneZoomState,
 	},
 	{
 		mods = "LEADER",

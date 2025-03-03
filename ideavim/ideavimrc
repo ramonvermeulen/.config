@@ -66,7 +66,7 @@ map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
 map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
 map <Leader>ff <action>(com.mituuz.fuzzier.FuzzierVCS)
 " requires the flash Jetbrains plugin
-map s (flash.search)
+map s <Action>(flash.search)
 
 nnoremap <Esc> :noh<CR>
 nnoremap <leader>r cgn

@@ -74,29 +74,8 @@ gui:
 
   # Config relating to colors and styles.
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#color-attributes
-  theme:
-    activeBorderColor:
-      - "#8caaee"
-      - bold
-    inactiveBorderColor:
-      - "#a5adce"
-    optionsTextColor:
-      - "#8caaee"
-    selectedLineBgColor:
-      - "#414559"
-    cherryPickedCommitBgColor:
-      - "#51576d"
-    cherryPickedCommitFgColor:
-      - "#8caaee"
-    unstagedChangesColor:
-      - "#e78284"
-    defaultFgColor:
-      - "#c6d0f5"
-    searchingActiveBorderColor:
-      - "#e5c890"
+  # theme:
 
-  authorColors:
-    "*": "#babbf1"
   # Config relating to the commit length indicator
   commitLength:
     # If true, show an indicator of commit message length

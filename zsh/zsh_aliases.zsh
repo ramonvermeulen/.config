@@ -16,6 +16,7 @@ alias _ip="curl ifconfig.me"
 alias nvenv="python -m venv .venv"
 alias k=kubectl
 alias g=lazygit
+alias gu="git config user.email"
 alias cat=bat
 alias greset="git reset --soft HEAD^"
 alias grep=rg

@@ -4,7 +4,6 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 format = """
-(git user: $custom\n)\
 $directory\
 $direnv\
 $git_branch\
@@ -30,7 +29,7 @@ vimcmd_symbol = "[❮](bold green)"  # vi-mode symbol
 truncate_to_repo = false
 truncation_symbol = ".../"
 truncation_length = 6
-style = "bold blue"
+style = "bold bright-cyan"
 
 [direnv]
 disabled = false
@@ -57,10 +56,4 @@ format = '[$symbol($version )]($style)'
 [gcloud]
 symbol = "󱇶 "
 format = '[$symbol$active(\($region\))]($style) '
-
-### Custom comands
-[custom.git_email]
-command = "git config user.email"
-when = "git rev-parse --git-dir 2> /dev/null"
-format = "[$output]($style)"
-style = "green bold"
+style = "bold bright-cyan"

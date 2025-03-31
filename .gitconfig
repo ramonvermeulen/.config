@@ -5,3 +5,16 @@
 [includeIf "gitdir:~/projects/work/<company>/"]
   path = .gitconfig_<company>
 
+# global settings
+[alias]
+	h = log --oneline --decorate --graph
+	s = status --short
+[init]
+	defaultbranch = main
+[push]
+	default = simple
+[fetch]
+	prune = 1
+	pruneTags = 1
+[pull]
+	ff = only

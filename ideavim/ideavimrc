@@ -62,9 +62,8 @@ nmap <leader>rm :action Move<CR>
 nmap <leader>ro :action OptimizeImports<CR>
 nmap <leader>rG :action Generate<CR>
 nmap <leader>f  :action ReformatCode<CR>
-map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
-map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
 map <Leader>ff <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>fg <action>(com.mituuz.fuzzier.FuzzyGrep)
 " requires the flash Jetbrains plugin
 map s <Action>(flash.search)
 

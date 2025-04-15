@@ -7,5 +7,5 @@ export FZF_DEFAULT_OPTS="--height 50% --layout=default --border --color=hl:#2dd4
 export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
 
 export GOPATH=$(go env GOPATH)
-
-export HOMEBREW_BUNDLE_FILE="$HOME/.config/brew/Brewfile"
+export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
+export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/brew/Brewfile"

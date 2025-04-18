@@ -31,3 +31,8 @@ act() {
     [ -f ".venv/bin/activate" ] && source .venv/bin/activate
     [ -f "venv/bin/activate" ] && source .venv/bin/activate
 }
+
+gwhoami() {
+  curl -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
+    https://www.googleapis.com/oauth2/v1/tokeninfo
+}

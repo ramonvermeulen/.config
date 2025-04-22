@@ -18,5 +18,3 @@
 	pruneTags = 1
 [pull]
   ff = only
-[core]
-	hooksPath = /Users/ramon/.config/.git-global-hooks

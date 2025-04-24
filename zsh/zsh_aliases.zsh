@@ -22,6 +22,7 @@ alias greset="git reset --soft HEAD^"
 alias grep=rg
 alias ginfo="gcloud config list"
 alias gact="gcloud config configurations activate"
+alias glogin="gcloud auth application-default login"
 alias ls=eza
 
 eval "$(pyenv init -)"

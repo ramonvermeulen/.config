@@ -93,16 +93,25 @@ config.keys = {
 	},
 }
 
--- TODO(ramon) would be could if I can have similar behavior to i3
--- e.g. when using LEADER-4 if 4 doesn't exist it spawns a split
 -- make splits start at 1
 config.tab_and_split_indices_are_zero_based = false
+
 for i = 1, 9 do
-	-- leader + number to activate that tab
+	-- leader + number to activate that tab or create it if it doesn't exist
 	table.insert(config.keys, {
 		key = tostring(i),
 		mods = "LEADER",
-		action = { ActivateTab = i - 1 },
+		action = wezterm.action_callback(function(window, pane)
+			local tabs = window:mux_window():tabs()
+			if #tabs >= i then
+				-- tab exists, activate it
+				window:perform_action(wezterm.action({ ActivateTab = i - 1 }), pane)
+			else
+				-- tab doesn't exist, create new tab
+				-- (gaps are unfortunately not supported e.g. having [1,2,4,6])
+				window:perform_action(wezterm.action.SpawnTab("CurrentPaneDomain"), pane)
+			end
+		end),
 	})
 end
 

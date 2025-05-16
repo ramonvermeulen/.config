@@ -24,6 +24,7 @@ alias ginfo="gcloud config list"
 alias gact="gcloud config configurations activate"
 alias glogin="gcloud auth application-default login"
 alias ls=eza
+alias tree="eza --icons=always -lA -T --git-ignore"
 
 eval "$(pyenv init -)"
 

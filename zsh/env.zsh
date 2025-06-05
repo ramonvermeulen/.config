@@ -1,7 +1,10 @@
 export XDG_CONFIG_HOME="$HOME/.config"
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
-export VI_MODE_SET_CURSOR=true
 export PYENV_ROOT="$HOME/.pyenv"
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
+export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/brew/Brewfile"
+
+export VI_MODE_SET_CURSOR=true
 export EDITOR="nvim"
 
 # fzf environment variables for CTRL-T (all files) or ALT-C (only dirs) keybinds
@@ -15,5 +18,4 @@ export HISTSIZE=1000000000
 export SAVEHIST=1000000000
 
 export GOPATH=$(go env GOPATH)
-export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
-export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/brew/Brewfile"
+

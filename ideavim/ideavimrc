@@ -62,10 +62,38 @@ nmap <leader>rm :action Move<CR>
 nmap <leader>ro :action OptimizeImports<CR>
 nmap <leader>rG :action Generate<CR>
 nmap <leader>f  :action ReformatCode<CR>
+" requires the fuzzier Jetbrains plugin
 map <Leader>ff <action>(com.mituuz.fuzzier.FuzzierVCS)
 map <Leader>fg <action>(com.mituuz.fuzzier.FuzzyGrep)
 " requires the flash Jetbrains plugin
 map s <Action>(flash.search)
+
+" requires the IJHarpoon Jetbrains plugin
+nmap <leader><C-1> :action SetHarpoon1<cr>
+nmap <leader><C-2> :action SetHarpoon2<cr>
+nmap <leader><C-3> :action SetHarpoon3<cr>
+nmap <leader><C-4> :action SetHarpoon4<cr>
+nmap <leader><C-5> :action SetHarpoon5<cr>
+nmap <leader><C-6> :action SetHarpoon6<cr>
+nmap <leader><C-7> :action SetHarpoon7<cr>
+nmap <leader><C-8> :action SetHarpoon8<cr>
+nmap <leader><C-9> :action SetHarpoon9<cr>
+
+nmap <leader>1 :action GotoHarpoon1<cr>
+nmap <leader>2 :action GotoHarpoon2<cr>
+nmap <leader>3 :action GotoHarpoon3<cr>
+nmap <leader>4 :action GotoHarpoon4<cr>
+nmap <leader>5 :action GotoHarpoon5<cr>
+nmap <leader>6 :action GotoHarpoon6<cr>
+nmap <leader>7 :action GotoHarpoon7<cr>
+nmap <leader>8 :action GotoHarpoon8<cr>
+nmap <leader>9 :action GotoHarpoon9<cr>
+
+nmap <leader>h :action ShowHarpoon<cr>
+nmap <leader><C-h> :action AddToHarpoon<cr>
+
+" quickly focus terminal
+nmap <leader>t :action ActivateTerminalToolWindow<CR>
 
 nnoremap <Esc> :noh<CR>
 nnoremap <leader>r cgn

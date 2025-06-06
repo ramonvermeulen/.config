@@ -24,7 +24,9 @@ alias ginfo="gcloud config list"
 alias gact="gcloud config configurations activate"
 alias glogin="gcloud auth application-default login"
 alias ls="eza --icons=always"
-alias tree="eza --icons=always -lA -T --git-ignore"
+alias la="ls -lA"
+alias c=clear
+alias tree="ls -lA -T --git-ignore"
 
 act() {
     [ -f "bin/activate" ] && source bin/activate

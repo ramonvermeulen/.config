@@ -98,3 +98,9 @@ nmap <leader>t :action ActivateTerminalToolWindow<CR>
 nnoremap <Esc> :noh<CR>
 nnoremap <leader>r cgn
 
+" Settings -> 
+" Left margin in distraction free mode = 0
+" Also `+t is nice for "hide all toolwindows"
+"
+nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
+

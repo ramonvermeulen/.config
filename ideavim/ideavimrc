@@ -94,13 +94,14 @@ nmap <leader><C-h> :action AddToHarpoon<cr>
 
 " quickly focus terminal
 nmap <leader>t :action ActivateTerminalToolWindow<CR>
+nmap <leader>c :action HideAllToolWindows<CR>
 
 nnoremap <Esc> :noh<CR>
 nnoremap <leader>r cgn
 
 " Settings -> 
 " Left margin in distraction free mode = 0
-" Also `+t is nice for "hide all toolwindows"
+" Also CTRL + Esc is nice for "Terminal > Switch focus to editor"
 "
 nnoremap <C-z> :action ToggleDistractionFreeMode<CR>
 

@@ -18,6 +18,8 @@ alias k=kubectl
 alias g=lazygit
 alias gu="git config user.email"
 alias cat=bat
+# in case I need the "real" cat
+alias rcat=/bin/cat
 alias greset="git reset --soft HEAD^"
 alias grep=rg
 alias ginfo="gcloud config list"

@@ -197,3 +197,7 @@ run = ['move-node-to-workspace 8']
 [[on-window-detected]]
 if.app-id = "com.tinyspeck.slackmacgap"
 run = ['move-node-to-workspace 9']
+
+[[on-window-detected]]
+if.app-id = "com.hnc.Discord"
+run = ['move-node-to-workspace 9']

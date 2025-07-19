@@ -18,6 +18,8 @@ if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
 fi
 
 # fzf keybindings and fuzzy completion
+# CTRL-R: Search command history
+# CTRL-T: Search through directories and files
 eval "$(fzf --zsh)"
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

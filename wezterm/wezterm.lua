@@ -91,6 +91,27 @@ config.keys = {
 		key = "UpArrow",
 		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
 	},
+	-- config to be able to scroll up down in vim way CTRL - u/d or k/j
+	{
+		mods = "CTRL",
+		key = "u",
+		action = wezterm.action.ScrollByLine(-15),
+	},
+	{
+		mods = "CTRL",
+		key = "d",
+		action = wezterm.action.ScrollByLine(15),
+	},
+	{
+		mods = "CTRL",
+		key = "k",
+		action = wezterm.action.ScrollByLine(-1),
+	},
+	{
+		mods = "CTRL",
+		key = "j",
+		action = wezterm.action.ScrollByLine(1),
+	},
 }
 
 -- make splits start at 1

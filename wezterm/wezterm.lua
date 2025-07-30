@@ -91,24 +91,24 @@ config.keys = {
 		key = "UpArrow",
 		action = wezterm.action.AdjustPaneSize({ "Up", 5 }),
 	},
-	-- config to be able to scroll up down in vim way CTRL - u/d or k/j
+	-- config to be able to scroll up down in vim way CTRL + SHIFT - u/d or k/j
 	{
-		mods = "CTRL",
+		mods = "CTRL|SHIFT",
 		key = "u",
 		action = wezterm.action.ScrollByLine(-15),
 	},
 	{
-		mods = "CTRL",
+		mods = "CTRL|SHIFT",
 		key = "d",
 		action = wezterm.action.ScrollByLine(15),
 	},
 	{
-		mods = "CTRL",
+		mods = "CTRL|SHIFT",
 		key = "k",
 		action = wezterm.action.ScrollByLine(-1),
 	},
 	{
-		mods = "CTRL",
+		mods = "CTRL|SHIFT",
 		key = "j",
 		action = wezterm.action.ScrollByLine(1),
 	},

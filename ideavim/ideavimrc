@@ -92,9 +92,8 @@ nmap <leader>9 :action GotoHarpoon9<cr>
 nmap <leader>h :action ShowHarpoon<cr>
 nmap <leader><C-h> :action AddToHarpoon<cr>
 
-" quickly focus terminal
+" quickly focus terminal, hide with shift + esc (caps)
 nmap <leader>t :action ActivateTerminalToolWindow<CR>
-nmap <leader>c :action HideAllToolWindows<CR>
 
 nnoremap <Esc> :noh<CR>
 nnoremap <leader>r cgn

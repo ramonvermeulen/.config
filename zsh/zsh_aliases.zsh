@@ -29,6 +29,11 @@ alias ls="eza --icons=always"
 alias la="ls -lA"
 alias c=clear
 alias tree="ls -lA -T --git-ignore"
+# git
+alias gp="git pull"
+alias gcm="git checkout main"
+alias gcb="git checkout -b"
+alias gs="git stash"
 
 act() {
     [ -f "bin/activate" ] && source bin/activate

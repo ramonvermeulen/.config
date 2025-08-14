@@ -8,6 +8,7 @@ load_node_before_nvim() {
     command nvim "$@"
 }
 
+alias v=load_node_before_nvim
 alias vi=load_node_before_nvim
 alias vim=load_node_before_nvim
 alias nvim=load_node_before_nvim
@@ -31,9 +32,11 @@ alias c=clear
 alias tree="ls -lA -T --git-ignore"
 # git
 alias gp="git pull"
+alias gc="git checkout"
 alias gcm="git checkout main"
 alias gcb="git checkout -b"
 alias gs="git stash"
+alias gsp="git stash pop"
 
 act() {
     [ -f "bin/activate" ] && source bin/activate

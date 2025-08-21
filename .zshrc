@@ -1,3 +1,8 @@
+# Install zsh-defer first (run this command once in terminal):
+# git clone https://github.com/romkatv/zsh-defer.git ~/zsh-defer
+
+source ~/zsh-defer/zsh-defer.plugin.zsh 2>/dev/null || { echo "zsh-defer not installed. Run: git clone https://github.com/romkatv/zsh-defer.git ~/zsh-defer" }
+
 for file in $HOME/.config/zsh/*.zsh; do
   source "$file"
 done
@@ -25,10 +30,12 @@ eval "$(fzf --zsh)"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
-eval "$(pyenv init - zsh)"
+
+zsh-defer eval "$(direnv hook zsh)"
+zsh-defer eval "$(zoxide init zsh)"
+zsh-defer eval "$(pyenv init - zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
+zsh-defer -c 'if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi'
+zsh-defer -c 'if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi'

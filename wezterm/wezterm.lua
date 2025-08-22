@@ -1,9 +1,6 @@
 local wezterm = require("wezterm")
 
 local config = {}
-config.font = wezterm.font_with_fallback({
-	"Fira Code",
-})
 config.force_reverse_video_cursor = true
 config.debug_key_events = true
 config.color_scheme = "Ibm 3270 (High Contrast) (Gogh)"

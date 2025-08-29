@@ -1,0 +1,17 @@
+# Example using multiple directory aware ssh configs
+# So that you can have multiple GitHub accounts without rewriting URLs
+
+# Company X SSH configuration 
+Match exec "pwd | grep -q '/projects/work/company_x/'"
+  Include ~/.ssh/config_company_x
+
+# Company Y SSH configuration 
+Match exec "pwd | grep -q '/projects/work/company_y/'"
+  Include ~/.ssh/config_company_y
+
+# Default (personal) GitHub configuration
+Host github.com
+  HostName github.com
+  IdentityFile ~/.ssh/id_rsa
+  IdentitiesOnly yes
+

@@ -1,17 +1,15 @@
-# Install zsh-defer first (run this command once in terminal):
-# git clone https://github.com/romkatv/zsh-defer.git ~/zsh-defer
-
-source ~/zsh-defer/zsh-defer.plugin.zsh 2>/dev/null || { echo "zsh-defer not installed. Run: git clone https://github.com/romkatv/zsh-defer.git ~/zsh-defer" }
+# uncomment next line for zsh profiling
+# ZSH_START_TIME=$EPOCHREALTIME
 
 for file in $HOME/.config/zsh/*.zsh; do
   source "$file"
 done
 
-# enable vi mode in shell
+# enable vi mode in shell - this is awesome
 bindkey -v
 
-# removes hostname from prompt
 prompt_context() {
+  # removes hostname from prompt
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
@@ -22,20 +20,25 @@ if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
     zle -N zle-keymap-select "";
 fi
 
-# fzf keybindings and fuzzy completion
-# CTRL-R: Search command history
-# CTRL-T: Search through directories and files
-eval "$(fzf --zsh)"
+if [[ ! -f ~/.zsh_plugins/evalcache/evalcache.plugin.zsh ]]; then
+  git clone https://github.com/mroth/evalcache.git ~/.zsh_plugins/evalcache
+fi
+source ~/.zsh_plugins/evalcache/evalcache.plugin.zsh
+
+_evalcache starship init zsh
+_evalcache fzf --zsh
+_evalcache direnv hook zsh
+_evalcache zoxide init zsh
+_evalcache pyenv init - zsh
+
+if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
+if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval "$(starship init zsh)"
+# uncomment next line for zsh profiling
+# ZSH_END_TIME=$EPOCHREALTIME
+# ZSH_ELAPSED_MS=$(( (ZSH_END_TIME - ZSH_START_TIME) ))
+# printf '⏱ Zsh startup took %.2f ms\n' $ZSH_ELAPSED_MS
 
-zsh-defer eval "$(direnv hook zsh)"
-zsh-defer eval "$(zoxide init zsh)"
-zsh-defer eval "$(pyenv init - zsh)"
-
-# The next line updates PATH for the Google Cloud SDK.
-zsh-defer -c 'if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi'
-zsh-defer -c 'if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi'

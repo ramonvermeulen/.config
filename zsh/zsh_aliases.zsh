@@ -39,7 +39,7 @@ alias gs="git stash"
 alias gsp="git stash pop"
 # grestore path/to/file -- handy to restore files from a source branch to a target branch
 alias gres="git restore --source"
-alias gresmain"git restore --source main --"
+alias gresmain="git restore --source main --"
 # first checkout your branch
 # then grebo <target> <original> -- handy to rebase a branch onto another 
 # for exmaple when reviewer of a PR asks you to change the target branch for the PR

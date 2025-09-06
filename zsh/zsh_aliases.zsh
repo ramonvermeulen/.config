@@ -59,3 +59,9 @@ gwhoami() {
   curl -H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
     https://www.googleapis.com/oauth2/v1/tokeninfo
 }
+
+p() {
+  local project_dir
+  project_dir=$(find ~/projects -type d -maxdepth 3 -mindepth 1 | fzf --height 40% --reverse --select-1 --exit-0)
+  cd "$project_dir"
+}

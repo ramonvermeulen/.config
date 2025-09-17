@@ -36,6 +36,7 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 
 # uncomment next line for zsh profiling
 # ZSH_END_TIME=$EPOCHREALTIME

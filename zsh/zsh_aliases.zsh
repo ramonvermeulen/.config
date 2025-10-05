@@ -30,6 +30,8 @@ alias ls="eza --icons=always"
 alias la="ls -lA"
 alias c=clear
 alias tree="ls -lA -T --git-ignore"
+alias tf="GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token) GOOGLE_PROJECT=$(gcloud config get-value core/project) terraform"
+
 # git
 alias gp="git pull"
 alias gc="git checkout"

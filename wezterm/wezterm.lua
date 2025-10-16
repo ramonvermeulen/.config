@@ -141,6 +141,7 @@ wezterm.on("update-right-status", function(window, _)
 	local SOLID_LEFT_ARROW = ""
 	local ARROW_FOREGROUND = { Foreground = { Color = "#1f1f28" } }
 	local prefix = ""
+	local time = wezterm.strftime("%H:%M:%S")
 
 	if window:leader_is_active() then
 		prefix = " " .. utf8.char(0x1f30a) -- ocean wave
@@ -156,6 +157,9 @@ wezterm.on("update-right-status", function(window, _)
 		{ Text = prefix },
 		ARROW_FOREGROUND,
 		{ Text = SOLID_LEFT_ARROW },
+	}))
+	window:set_right_status(wezterm.format({
+		{ Text = time },
 	}))
 end)
 

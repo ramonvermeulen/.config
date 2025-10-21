@@ -54,6 +54,7 @@ alias grebo"git rebase --onto"
 
 # quickly open daily notes
 alias d="zk daily"
+alias m="zk monthly"
 
 
 act() {

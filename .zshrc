@@ -29,7 +29,7 @@ _evalcache starship init zsh
 _evalcache fzf --zsh
 _evalcache direnv hook zsh
 _evalcache zoxide init zsh
-_evalcache pyenv init - zsh
+eval "$(pyenv init - zsh)"
 
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi

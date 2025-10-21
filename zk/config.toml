@@ -22,6 +22,14 @@ filename = "{{format-date now '%Y'}}/{{format-date now '%m'}}/{{format-date now 
 extension = "md"
 template = "daily.md"
 
+[group.monthly]
+paths = ["monthly"]
+
+[group.monthly.note]
+filename = "{{format-date now '%Y'}}/{{format-date now '%m'}}/monthly_notes"
+extension = "md"
+template = "monthly.md"
+
 [format.markdown]
 hashtags = true
 colon-tags = true
@@ -40,6 +48,7 @@ edlast = "zk edit --limit 1 --sort modified- $@"
 recent = "zk edit --sort created- --created-after 'last two weeks' --interactive"
 lucky = "zk list --quiet --format full --sort random --limit 1"
 daily = 'zk new --no-input "$ZK_NOTEBOOK_DIR/daily"'
+monthly = 'zk new --no-input "$ZK_NOTEBOOK_DIR/monthly"'
 ls = "zk edit --interactive"
 
 

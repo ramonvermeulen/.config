@@ -24,3 +24,4 @@ addToPath /opt/nvim-linux64/bin
 addToPath /opt/homebrew/bin
 addToPath /opt/homebrew/sbin
 addToPath /Applications/WezTerm.app/Contents/MacOS
+addToPath /Users/ramon/Applications/istio-1.28.0/bin

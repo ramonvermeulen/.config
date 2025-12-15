@@ -17,4 +17,7 @@
 	prune = 1
 	pruneTags = 1
 [pull]
-  ff = only
+	ff = only
+[core]
+	autocrlf = input
+	excludesfile = /Users/ramon/.gitignore

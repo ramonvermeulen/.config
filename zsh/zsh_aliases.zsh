@@ -24,6 +24,7 @@ alias ocat=/bin/cat
 alias greset="git reset --soft HEAD^"
 alias grep=rg
 alias ginfo="gcloud config list"
+alias glist="gcloud config configurations list"
 alias gact="gcloud config configurations activate"
 alias glogin="gcloud auth application-default login"
 alias ls="eza --icons=always"
@@ -70,6 +71,6 @@ gwhoami() {
 
 p() {
   local project_dir
-  project_dir=$(find ~/projects -type d -maxdepth 3 -mindepth 1 | fzf --height 40% --reverse --select-1 --exit-0)
+  project_dir=$(find ~/projects $GOPATH/src -type d -maxdepth 3 -mindepth 1 | fzf --height 40% --reverse --select-1 --exit-0)
   cd "$project_dir"
 }

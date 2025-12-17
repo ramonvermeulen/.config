@@ -11,7 +11,7 @@ Clone the repository into your `$HOME` directory:
 ```bash
 git clone --recurse-submodules git@github.com:ramonvermeulen/.config.git $HOME/.config \
   && cp $HOME/.config/.zshrc $HOME/.zshrc \
-  && cp $HOME/.config/.gitignore $HOME/.gitignore \
+  && cp $HOME/.config/.gitignore.global $HOME/.gitignore \
   && cp $HOME/.config/.gitconfig $HOME/.gitconfig \
   && cp $HOME/.config/.gitconfig_personal $HOME/.gitconfig_personal
 ```

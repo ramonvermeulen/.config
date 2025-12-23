@@ -35,8 +35,8 @@ alias tree="ls -lA -T --git-ignore"
 # alias tf="GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token) GOOGLE_PROJECT=$(gcloud config get-value core/project) terraform"
 
 # magic-modules
-alias mmb="cd ~/projects/personal/magic-modules && make provider VERSION=ga OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google && make build && . ~/setup-gcp-env.sh"
-alias mmbb="cd ~/projects/personal/magic-modules && make provider VERSION=beta OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && make build&& . ~/setup-gcp-env.sh"
+alias mmb="cd ~/projects/personal/magic-modules && make provider VERSION=ga OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google && make build"
+alias mmbb="cd ~/projects/personal/magic-modules && make provider VERSION=beta OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && make build"
 
 # git
 alias gp="git pull"

@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # uncomment next line for zsh profiling
 # ZSH_START_TIME=$EPOCHREALTIME
 
@@ -8,24 +15,11 @@ done
 # enable vi mode in shell - this is awesome
 bindkey -v
 
-prompt_context() {
-  # removes hostname from prompt
-  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-  fi
-}
-
-if [[ "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select" || \
-      "${widgets[zle-keymap-select]#user:}" == "starship_zle-keymap-select-wrapped" ]]; then
-    zle -N zle-keymap-select "";
-fi
-
 if [[ ! -f ~/.zsh_plugins/evalcache/evalcache.plugin.zsh ]]; then
   git clone https://github.com/mroth/evalcache.git ~/.zsh_plugins/evalcache
 fi
 source ~/.zsh_plugins/evalcache/evalcache.plugin.zsh
 
-_evalcache starship init zsh
 _evalcache fzf --zsh
 _evalcache direnv hook zsh
 _evalcache zoxide init zsh
@@ -39,8 +33,11 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source <(kubectl completion zsh)
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f "$XDG_CONFIG_HOME/p10k/.p10k.zsh" ]] || source "$XDG_CONFIG_HOME/p10k/.p10k.zsh"
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
 # uncomment next line for zsh profiling
 # ZSH_END_TIME=$EPOCHREALTIME
 # ZSH_ELAPSED_MS=$(( (ZSH_END_TIME - ZSH_START_TIME) ))
 # printf '⏱ Zsh startup took %.2f ms\n' $ZSH_ELAPSED_MS
-

@@ -12,6 +12,7 @@ alias v=load_node_before_nvim
 alias vi=load_node_before_nvim
 alias vim=load_node_before_nvim
 alias nvim=load_node_before_nvim
+alias h=hx
 alias up="sudo apt-get update && sudo apt-get upgrade"
 alias _ip="curl ifconfig.me"
 alias nvenv="python -m venv .venv"
@@ -45,6 +46,8 @@ alias gcm="git checkout main"
 alias gcb="git checkout -b"
 alias gs="git stash"
 alias gsp="git stash pop"
+alias gd="git --no-pager diff main...HEAD | cat"
+alias gdiff="gd"
 # grestore path/to/file -- handy to restore files from a source branch to a target branch
 alias gres="git restore --source"
 alias gresmain="git restore --source main --"

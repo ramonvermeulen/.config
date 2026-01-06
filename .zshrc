@@ -15,14 +15,9 @@ done
 # enable vi mode in shell - this is awesome
 bindkey -v
 
-if [[ ! -f ~/.zsh_plugins/evalcache/evalcache.plugin.zsh ]]; then
-  git clone https://github.com/mroth/evalcache.git ~/.zsh_plugins/evalcache
-fi
-source ~/.zsh_plugins/evalcache/evalcache.plugin.zsh
-
-_evalcache fzf --zsh
-_evalcache direnv hook zsh
-_evalcache zoxide init zsh
+eval "$(direnv hook zsh)"
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 eval "$(pyenv init - zsh)"
 
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi

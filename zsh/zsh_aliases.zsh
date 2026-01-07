@@ -48,6 +48,7 @@ alias gs="git stash"
 alias gsp="git stash pop"
 alias gd="git --no-pager diff main...HEAD | cat"
 alias gdiff="gd"
+alias -g C="| pbcopy"
 # grestore path/to/file -- handy to restore files from a source branch to a target branch
 alias gres="git restore --source"
 alias gresmain="git restore --source main --"

@@ -7,11 +7,11 @@ config.color_scheme = "Ibm 3270 (High Contrast) (Gogh)"
 config.font_size = 20
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = false
-config.tab_bar_at_bottom = true
+config.tab_bar_at_bottom = false
 config.use_fancy_tab_bar = false
 config.tab_and_split_indices_are_zero_based = true
 config.window_background_opacity = 0.77
-config.macos_window_background_blur = 20
+config.macos_window_background_blur = 10
 
 -- tmux
 config.leader = { key = "`", mods = "OPT", timeout_milliseconds = 2000 }

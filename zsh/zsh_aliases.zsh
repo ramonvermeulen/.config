@@ -57,11 +57,6 @@ alias gresmain="git restore --source main --"
 # for exmaple when reviewer of a PR asks you to change the target branch for the PR
 alias grebo"git rebase --onto"
 
-# quickly open daily notes
-alias d="zk daily"
-alias m="zk monthly"
-
-
 act() {
     [ -f "bin/activate" ] && source bin/activate
     [ -f ".venv/bin/activate" ] && source .venv/bin/activate

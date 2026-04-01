@@ -7,18 +7,26 @@
 
 # global settings
 [alias]
-	h = log --oneline --decorate --graph
-	s = status --short
+  h = log --oneline --decorate --graph
+  s = status --short
 [init]
-	defaultbranch = main
+  defaultbranch = main
 [push]
-	default = simple
+  default = simple
 [fetch]
-	prune = 1
-	pruneTags = 1
+  prune = 1
+  pruneTags = 1
 [pull]
   rebase = true
-	; ff = only
+  ; ff = only
 [core]
-	autocrlf = input
-	excludesfile = /Users/ramon/.gitignore
+  autocrlf = input
+  excludesfile = ~/.gitignore
+[user]
+  signingkey = 13264BE67F56AF19
+[commit]
+  gpgsign = true
+[tag]
+  gpgSign = true
+[gpg]
+  program = gpg

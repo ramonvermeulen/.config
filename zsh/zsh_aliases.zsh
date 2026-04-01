@@ -70,6 +70,6 @@ gwhoami() {
 
 p() {
   local project_dir
-  project_dir=$(find ~/projects $GOPATH/src -type d -maxdepth 3 -mindepth 1 | fzf --height 40% --reverse --select-1 --exit-0)
+  project_dir=$(find ~/projects $GOPATH/src -type d -maxdepth 4 -mindepth 1 | fzf --height 40% --reverse --select-1 --exit-0)
   cd "$project_dir"
 }

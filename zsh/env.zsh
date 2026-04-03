@@ -16,7 +16,7 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
 
 export HISTSIZE=1000000000
 export SAVEHIST=1000000000
-export GPG_TTY=$(tty)
+export GPG_TTY=$TTY
 
 export GOPATH=$(go env GOPATH)
 

@@ -1,5 +1,6 @@
 [user]
   email = ramonvermeulen98@gmail.com
   name = Ramon Vermeulen
+	signingkey = /Users/ramon/.ssh/bw-git-signing.pub
 [pull]
   rebase = true

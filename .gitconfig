@@ -22,8 +22,6 @@
 [core]
   autocrlf = input
   excludesfile = ~/.gitignore
-[user]
-  signingkey = ~/.ssh/bw-git-signing.pub
 [commit]
   gpgsign = true
 [tag]

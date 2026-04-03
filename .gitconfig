@@ -23,10 +23,12 @@
   autocrlf = input
   excludesfile = ~/.gitignore
 [user]
-  signingkey = 13264BE67F56AF19
+  signingkey = ~/.ssh/bw-git-signing.pub
 [commit]
   gpgsign = true
 [tag]
   gpgSign = true
 [gpg]
   program = gpg
+  format = ssh
+

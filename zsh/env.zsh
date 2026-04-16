@@ -17,6 +17,8 @@ export FZF_CTRL_T_OPTS="--preview 'bat --color=always -n --line-range :500 {}'"
 export HISTSIZE=1000000000
 export SAVEHIST=1000000000
 export GPG_TTY=$TTY
-
+export DOCKER_BUILDKIT=1
+export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+export COMPOSE_DOCKER_CLI_BUILD=1
 export GOPATH=$(go env GOPATH)
 

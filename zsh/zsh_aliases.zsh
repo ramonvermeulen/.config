@@ -39,6 +39,9 @@ alias tree="ls -lA -T --git-ignore"
 alias mmb="cd ~/projects/personal/magic-modules && make provider VERSION=ga OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google && make build"
 alias mmbb="cd ~/projects/personal/magic-modules && make provider VERSION=beta OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && make build"
 
+# magos
+alias mcc="cd ~/projects/personal/magos && kind delete cluster && kind create cluster && make docker-build && make kind-load && make install && k apply -f samples/ && make run"
+
 # git
 alias gp="git pull"
 alias gc="git checkout"

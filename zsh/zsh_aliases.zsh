@@ -18,8 +18,9 @@ alias _ip="curl ifconfig.me"
 alias nvenv="python -m venv .venv"
 alias k=kubectl
 alias g=lazygit
+alias t=terraform
+alias d=docker
 alias gu="git config user.email"
-alias cat=bat
 # in case I need the "original" cat
 alias ocat=/bin/cat
 alias greset="git reset --soft HEAD^"
@@ -40,7 +41,8 @@ alias mmb="cd ~/projects/personal/magic-modules && make provider VERSION=ga OUTP
 alias mmbb="cd ~/projects/personal/magic-modules && make provider VERSION=beta OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && make build"
 
 # magos
-alias mcc="cd ~/projects/personal/magos && kind delete cluster && kind create cluster && make docker-build && make kind-load && make install && k apply -f samples/ && make run"
+alias mcc="cd ~/projects/personal/magos && make kind-cluster-delete && make kind-cluster && make dev && make port-forward"
+alias mcr="cd ~/projects/personal/magos && make kind-cluster-delete && make kind-cluster && make run"
 
 # git
 alias gp="git pull"
@@ -50,6 +52,8 @@ alias gcb="git checkout -b"
 alias gs="git stash"
 alias gsp="git stash pop"
 alias gd="git --no-pager diff main...HEAD | cat"
+alias gf="git fetch"
+alias gfa="git fetch --all"
 alias gdiff="gd"
 alias -g C="| pbcopy"
 # grestore path/to/file -- handy to restore files from a source branch to a target branch

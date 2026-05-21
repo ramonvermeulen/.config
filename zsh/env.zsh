@@ -1,5 +1,6 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 export PYENV_ROOT="$HOME/.pyenv"
+export HOMEBREW_PREFIX="/opt/homebrew"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export EZA_CONFIG_DIR="$XDG_CONFIG_HOME/eza"
 export HOMEBREW_BUNDLE_FILE="$XDG_CONFIG_HOME/brew/Brewfile"
@@ -18,7 +19,6 @@ export HISTSIZE=1000000000
 export SAVEHIST=1000000000
 export GPG_TTY=$TTY
 export DOCKER_BUILDKIT=1
-export DOCKER_HOST="unix://${XDG_CONFIG_HOME}/colima/default/docker.sock"
+# export DOCKER_HOST="unix://${XDG_CONFIG_HOME}/colima/default/docker.sock"
 export COMPOSE_DOCKER_CLI_BUILD=1
-export GOPATH=$(go env GOPATH)
-
+export GOPATH="${GOPATH:-$HOME/go}"

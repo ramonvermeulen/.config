@@ -18,19 +18,57 @@ bindkey -v
 eval "$(direnv hook zsh)"
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
-eval "$(pyenv init - zsh)"
 
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/google-cloud-sdk/path.zsh.inc"; fi
 if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-cloud-sdk/completion.zsh.inc"; fi
 
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source <(kubectl completion zsh)
+lazy_load_pyenv() {
+  unset -f pyenv python python3 pip pip3
+  eval "$(pyenv init - --no-rehash zsh)"
+}
+
+pyenv() {
+  lazy_load_pyenv
+  pyenv "$@"
+}
+
+python() {
+  lazy_load_pyenv
+  python "$@"
+}
+
+python3() {
+  lazy_load_pyenv
+  python3 "$@"
+}
+
+pip() {
+  lazy_load_pyenv
+  pip "$@"
+}
+
+pip3() {
+  lazy_load_pyenv
+  pip3 "$@"
+}
+
+if [ -f "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+  source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+if [ -f "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+
+kubectl() {
+  unset -f kubectl
+  source <(command kubectl completion zsh)
+  command kubectl "$@"
+}
 bindkey '^[[Z' autosuggest-accept  # shift + tab  | autosuggest
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f "$XDG_CONFIG_HOME/p10k/.p10k.zsh" ]] || source "$XDG_CONFIG_HOME/p10k/.p10k.zsh"
 source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+[[ ! -f "$XDG_CONFIG_HOME/p10k/.p10k.zsh" ]] || source "$XDG_CONFIG_HOME/p10k/.p10k.zsh"
 
 # uncomment next line for zsh profiling
 # ZSH_END_TIME=$EPOCHREALTIME

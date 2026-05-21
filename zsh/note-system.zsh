@@ -5,7 +5,7 @@ export NOTE_DAILIES="${NOTE_VAULT}/06-dailies"
 export NOTE_INBOX="${NOTE_VAULT}/01-inbox"
 export NOTE_EDITOR="${EDITOR:-vim}"
 
-d() {
+n() {
     local monday
     if [[ $(date +%u) -eq 1 ]]; then
         monday=$(date -I)

@@ -33,6 +33,8 @@ alias ls="eza --icons=always"
 alias la="ls -lA"
 alias c=clear
 alias tree="ls -lA -T --git-ignore"
+alias f=yazi
+alias q=exit
 # commented because it slows down start-up a lot
 # alias tf="GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token) GOOGLE_PROJECT=$(gcloud config get-value core/project) terraform"
 

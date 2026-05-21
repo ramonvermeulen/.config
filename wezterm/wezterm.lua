@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 local config = {}
 config.force_reverse_video_cursor = true
-config.debug_key_events = true
+config.debug_key_events = false
 config.color_scheme = "Ibm 3270 (High Contrast) (Gogh)"
 config.font_size = 20
 config.window_decorations = "RESIZE"

@@ -272,6 +272,7 @@ os:
   editAtLineAndWait: "nvim +{{line}} -- {{filename}}"
   # Whether lazygit suspends until an edit process returns
   editInTerminal: true
+  openInTerminal: true
   # For opening a directory in an editor
   openDirInEditor: ""
   # A built-in preset that sets all of the above settings. Supported presets
@@ -356,8 +357,8 @@ keybinding:
     confirmInEditor: <a-enter>
     remove: d
     new: "n"
-    edit: o
-    openFile: <disabled>
+    edit: e
+    openFile: o
     scrollUpMain: <pgup>
     scrollDownMain: <pgdown>
     scrollUpMain-alt1: K
@@ -452,7 +453,7 @@ keybinding:
     markCommitAsBaseForRebase: B
     tagCommit: T
     checkoutCommit: <space>
-    resetCherryPick: <c-R>
+    resetCherryPick: <c-r>
     copyCommitAttributeToClipboard: "y"
     openLogMenu: <c-l>
     openInBrowser: o

@@ -189,7 +189,7 @@ git:
   merging:
     # If true, run merges in a subprocess so that if a commit message is required, Lazygit will not hang
     # Only applicable to unix users.
-    manualCommit: false
+    manualCommit: true
     # Extra args passed to `git merge`, e.g. --no-ff
     args: ""
     # The commit message to use for a squash merge commit. Can contain "{{selectedRef}}" and "{{currentBranch}}" placeholders.

@@ -1,6 +1,6 @@
 tap "airbytehq/tap"
 tap "domt4/autoupdate"
-tap "felixkratz/formulae"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "hashicorp/tap"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -8,79 +8,145 @@ tap "jesseduffield/lazydocker"
 tap "jesseduffield/lazygit"
 tap "matthart1983/tap"
 tap "nikitabobko/tap"
+# ARP scanning and fingerprinting tool
 brew "arp-scan"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Explore the (overlay) filesystem and layers of OCI container images
 brew "cek"
+# Prevent cloud misconfigurations during build-time for IaC tools
 brew "checkov"
+# Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle
+brew "clusterctl"
+# Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
+# Test your configuration files using Open Policy Agent
 brew "conftest"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Load/unload environment variables based on $PWD
 brew "direnv"
+# Tool for exploring each layer in a docker image
 brew "dive"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
+# Isolated development environments using Docker
 brew "docker-compose"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# X11 implementation of the Remote Desktop Protocol (RDP)
+brew "freerdp"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg@1.4"
+# Fast linters runner for Go
 brew "golangci-lint"
+# Command-line Golang template processor
 brew "gomplate"
+# Deliver Go binaries as fast and easily as possible
 brew "goreleaser"
+# Post-modern modal text editor
 brew "helix"
+# Kubernetes package manager
 brew "helm"
+# Improved top (interactive process viewer)
 brew "htop"
+# Command-line pager for JSON data
 brew "jless"
+# Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Run local Kubernetes cluster in Docker
 brew "kind"
+# Kubernetes command-line interface
 brew "kubernetes-cli"
+# Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# Kubernetes Native Policy Management
 brew "kyverno"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Java-based project management
 brew "maven"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Port scanning utility for large networks
 brew "nmap"
+# SDK for building Kubernetes applications
 brew "operator-sdk"
+# Process manager for Procfile-based applications and tmux
 brew "overmind"
+# Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
 brew "pipx"
-brew "podman"
+# Theme for zsh
 brew "powerlevel10k"
+# Protocol buffers (Google's data interchange format)
 brew "protobuf"
+# Show ps output as a tree
 brew "pstree"
+# Python version management
 brew "pyenv"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
-brew "ruby"
+# Powerful, clean, object-oriented scripting language
+brew "ruby", link: false
+# User interface to the TELNET protocol
+brew "telnet"
+# Tool to generate documentation from Terraform modules
 brew "terraform-docs"
+# Linter for Terraform files
 brew "tflint"
+# Simplified and community-driven man pages
 brew "tldr"
+# Your CLI home video recorder
 brew "vhs"
+# Executes a program periodically, showing output fullscreen
 brew "watch"
+# LAN discovery tool with a modern TUI written in Go
 brew "whosthere"
+# XQuery and XPath 2 command-line interpreter
 brew "xqilla"
+# Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi", args: ["HEAD"]
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Programming language designed for robustness, optimality, and clarity
 brew "zig"
+# Find security issues in GitHub Actions setups
 brew "zizmor"
+# Plain text note-taking assistant
 brew "zk"
+# CLI tool for querying DNS records with readable, colored output
 brew "zns"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-brew "airbytehq/tap/abctl"
-brew "felixkratz/formulae/borders"
-brew "felixkratz/formulae/sketchybar"
-brew "hashicorp/tap/terraform"
-brew "jesseduffield/lazydocker/lazydocker"
-brew "matthart1983/tap/netwatch"
+# OpenAI's coding agent that runs in your terminal
 cask "codex"
 cask "font-hack-nerd-font"
 cask "font-iosevka"
+# Orchestrates virtual Ubuntu instances
 cask "multipass"
+# Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Replacement for Docker Desktop
 cask "orbstack"
 go "github.com/rhysd/actionlint/cmd/actionlint"
 go "github.com/xebia/go-training/examples/anonymous"
@@ -185,9 +251,7 @@ go "github.com/swaggo/swag/cmd/swag"
 go "github.com/xebia/go-training/examples/sync"
 go "github.com/xebia/go-training/examples/template"
 go "github.com/katbyte/terrafmt"
-go "github.com/hashicorp/terraform-provider-aws"
 go "github.com/hashicorp/terraform-provider-google"
-go "github.com/hashicorp/terraform-provider-google-beta"
 go "github.com/terraform-linters/tflint"
 go "github.com/YakDriver/tfproviderdocs"
 go "github.com/xebia/go-training/examples/transactional"
@@ -197,10 +261,10 @@ go "github.com/xebia/go-training/examples/channels/waitgroup"
 go "github.com/xebia/go-training/examples/webserver"
 go "github.com/xebia/go-training/examples/webserverorg"
 go "github.com/xebia/go-training/examples/while"
-uv "apache-airflow-breeze"
+uv "apache-airflow-breeze", source: "file:///Users/ramon/projects/personal/airflow/dev/breeze"
 uv "keyring", with: ["keyrings-google-artifactregistry-auth"]
 uv "pre-commit"
-uv "python-import"
+uv "python-import", source: "file:///Users/ramon/.local/share/nvim/lazy/python-import.nvim"
 uv "ruff"
 uv "shandy-sqlfmt[jinjafmt]"
 npm "@bitnami/readme-generator-for-helm"

@@ -38,6 +38,9 @@ alias q=exit
 # commented because it slows down start-up a lot
 # alias tf="GOOGLE_OAUTH_ACCESS_TOKEN=$(gcloud auth print-access-token) GOOGLE_PROJECT=$(gcloud config get-value core/project) terraform"
 
+# enforces to not go into sleep mode 
+alias nosleep="caffeinate -disu"
+
 # magic-modules
 alias mmb="cd ~/projects/personal/magic-modules && make provider VERSION=ga OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google && make build"
 alias mmbb="cd ~/projects/personal/magic-modules && make provider VERSION=beta OUTPUT_PATH=$GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && cd $GOPATH/src/github.com/hashicorp/terraform-provider-google-beta && make build"

@@ -375,7 +375,7 @@ keybinding:
     createPatchOptionsMenu: <c-p>
     nextTab: "]"
     prevTab: "["
-    nextScreenMode: +
+    nextScreenMode: f
     prevScreenMode: _
     undo: z
     redo: <c-z>
@@ -409,7 +409,7 @@ keybinding:
     viewStashOptions: S
     toggleStagedAll: a
     viewResetOptions: D
-    fetch: f
+    fetch: F
     toggleTreeView: "`"
     openMergeOptions: M
     openStatusFilter: <c-b>

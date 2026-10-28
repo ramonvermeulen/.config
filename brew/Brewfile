@@ -1,5 +1,6 @@
 tap "airbytehq/tap"
 tap "domt4/autoupdate"
+tap "eugene1g/safehouse"
 tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "hashicorp/tap"
 tap "homebrew/cask"
@@ -40,6 +41,8 @@ brew "docker-compose"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Command-line tools for fly.io services
+brew "flyctl"
 # X11 implementation of the Remote Desktop Protocol (RDP)
 brew "freerdp"
 # Command-line fuzzy finder written in Go
@@ -100,10 +103,12 @@ brew "protobuf"
 brew "pstree"
 # Python version management
 brew "pyenv"
+# Tiny command-line DNS client with support for UDP, TCP, DoT, DoH, DoQ and ODoH
+brew "q"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
-brew "ruby", link: false
+brew "ruby"
 # User interface to the TELNET protocol
 brew "telnet"
 # Tool to generate documentation from Terraform modules
@@ -121,7 +126,7 @@ brew "whosthere"
 # XQuery and XPath 2 command-line interpreter
 brew "xqilla"
 # Blazing fast terminal file manager written in Rust, based on async I/O
-brew "yazi", args: ["HEAD"]
+brew "yazi"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # Programming language designed for robustness, optimality, and clarity
@@ -138,6 +143,8 @@ brew "zoxide"
 brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# macOS sandbox wrapper for coding agents
+brew "eugene1g/safehouse/agent-safehouse", trusted: true
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 cask "font-hack-nerd-font"
@@ -261,12 +268,14 @@ go "github.com/xebia/go-training/examples/channels/waitgroup"
 go "github.com/xebia/go-training/examples/webserver"
 go "github.com/xebia/go-training/examples/webserverorg"
 go "github.com/xebia/go-training/examples/while"
-uv "apache-airflow-breeze", source: "file:///Users/ramon/projects/personal/airflow/dev/breeze"
+uv "apache-airflow-breeze"
 uv "keyring", with: ["keyrings-google-artifactregistry-auth"]
 uv "pre-commit"
-uv "python-import", source: "file:///Users/ramon/.local/share/nvim/lazy/python-import.nvim"
+uv "python-import"
 uv "ruff"
 uv "shandy-sqlfmt[jinjafmt]"
 npm "@bitnami/readme-generator-for-helm"
 npm "cclimits"
 npm "corepack"
+npm "pnpm"
+npm "ui-ux-pro-max-cli"
